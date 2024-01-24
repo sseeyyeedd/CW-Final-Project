@@ -31,4 +31,18 @@ Memory leaks occur when a computer program allocates memory for an object or dat
 \subsubsection{Memory profilers}
 Valgrind is a programming tool designed for memory debugging, memory leak detection, and profiling. It is widely used for analyzing and identifying memory-related issues in C and C++ programs.\\
 It actively detects instances where memory is allocated but not properly deallocated during program execution. Through detailed reports, Valgrind highlights the exact lines of code responsible for memory leaks and provides call stack information, aiding developers in understanding the sequence of function calls leading to the allocation.
+\subsection{GNU/Linux Bash Scripting}
+\subsubsection{fzf}
+\begin{enumerate}
+\item 
+Fuzzy searching is a method that finds approximate matches for a query, accommodating typos or variations in text. It's useful when exact matches may not be available, allowing systems to retrieve relevant results based on similarity rather than strict matching.
+\item This command lists files and directories using "ls" and then pipes the output into "fzf," enabling us to search the results of "ls".
+
+\end{enumerate}
+\subsubsection{Using fzf to find your favorite PDF}
+fd -e pdf\\
+fd -e pdf | fzf
+\subsubsection{Opening the file using Zathura}
+zathura "\$(fd -e pdf | fzf)"
+
 \end{document}
